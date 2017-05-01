@@ -1,3 +1,137 @@
 // Place all the styles related to the LandingPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.centro{
+    display: inline-block;
+    text-align: center;
+}
+
+.encaG{
+    color: #eee;
+    font-weight: 300;
+}
+
+.flechita{
+    font-size: 60px;
+    color: #c7d500;
+    padding-top: 2em;
+}
+
+.logoHead{
+    width: 57%;
+}
+
+button.lupaB{
+    background-color: #9DAA0A;
+    color: #eee;
+    border-color: #9DAA0A;
+}
+
+button.lupaB:hover{
+    background-color: #B5EE72;
+    color: #eee
+}
+
+button.lupaB:hover{
+    background-color: #d5ff87;
+    color: #eee
+}
+
+button.lupaB:active{
+    background-color: #c7d500;
+    color: #eee
+}
+
+.menuOhana{
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 0.3em;
+}
+
+.navbar-default .ulNav > li > a{
+    background-color: transparent;
+    color: #eee;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.navbar-default .ulNav > li > a:hover,
+.navbar-default .ulNav > li > a:focus {
+    border-bottom: 2px solid #B5EE72;
+    color: #d5ff87;
+    margin-right: 3em;
+}
+
+.navbar-default .ulNav > .active > a {
+    background-color: transparent;
+    border-bottom: 2px solid #c7d500;
+    color: #eee;
+}
+
+.navbar-default .ulNav > .active > a:hover,
+.navbar-default .ulNav > .active > a:focus{
+    background-color: transparent;
+    border-bottom: 2px solid #c7d500;
+    color: #e7febd;
+}
+
+.titulo{
+    background-color: #131f28;
+}
+
+@media (max-width: 767px) { 
+    .enca{
+        padding-top: 6.5em;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .enca{
+        padding-top: 7em;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .enca{
+        padding-top: 8.5em;
+    }
+}
+@media (min-width: 1200px) {
+    .encaH4{
+        padding-top: 0px;
+        padding-bottom: 0.75em;
+        padding-left: 5.65em;
+        line-height: 27px;
+    }
+
+    .encaH1{
+        padding-top: 7em;
+        padding-left: 2.65em;
+        padding-bottom: 0px;
+        line-height: 43px;
+    }
+
+    .barraBusq{
+        padding-left: 7em;
+    }
+
+    .lupa{
+        font-size: 20px;
+    }
+
+    .lupaB{
+        padding-bottom: 2px;
+    }
+
+    .flechita{
+        font-size: 60px;
+        padding-top: 2em;
+    }
+
+    .navbar-default .ulNav > li > a,
+    .navbar-default .ulNav > .active > a{
+        margin-left: 2em;
+    }
+}
