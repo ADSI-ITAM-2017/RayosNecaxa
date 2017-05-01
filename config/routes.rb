@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'swipe_propiedades/index'
+
   get 'landing_page/index'
 
   root 'landing_page#index'
