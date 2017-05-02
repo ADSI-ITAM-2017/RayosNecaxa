@@ -1,0 +1,2 @@
+class Arrendador < ApplicationRecord
+end
