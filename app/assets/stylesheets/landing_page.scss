@@ -1,8 +1,14 @@
 // Place all the styles related to the LandingPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-    font-family: 'Lato', sans-serif;
+.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+  position: relative;
 }
 
 .centro{
@@ -10,9 +16,35 @@ body{
     text-align: center;
 }
 
+#como{
+    padding: 4.375em 0;
+    position: relative;
+    z-index: 3;
+    display: block;
+    background-color: #1D8D6D;
+}
+
+#comoOhana {
+    font-size: 2.65em;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.conBg{
+    background-color: #131f28;
+}
+
 .encaG{
     color: #eee;
     font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.flecha{
+    display: inline-block;
+    text-align: center;
 }
 
 .flechita{
@@ -22,7 +54,7 @@ body{
 }
 
 .logoHead{
-    width: 57%;
+    width: 50%;
 }
 
 button.lupaB{
@@ -49,7 +81,6 @@ button.lupaB:active{
 .menuOhana{
     background-color: transparent;
     border-color: transparent;
-    margin-top: 0.3em;
 }
 
 .navbar-default .ulNav > li > a{
@@ -63,7 +94,6 @@ button.lupaB:active{
 .navbar-default .ulNav > li > a:focus {
     border-bottom: 2px solid #B5EE72;
     color: #d5ff87;
-    margin-right: 3em;
 }
 
 .navbar-default .ulNav > .active > a {
@@ -79,9 +109,121 @@ button.lupaB:active{
     color: #e7febd;
 }
 
-.titulo{
-    background-color: #131f28;
+.separator-container{
+    text-align: center;
+    position: relative;
 }
+
+.separator-v{
+    margin: 2em auto 2em;
+    width: 11em;
+    border: 1px groove #c7d500;
+}
+
+.separator-b{
+    margin: 2em auto 2em;
+    width: 11em;
+    border: 1px groove #333844;
+}
+
+.sinBg{
+    background-color: transparent;
+}
+
+#textoComoOhana {
+    font-family: 'Raleway', sans-serif;
+    color: #d8d8d8;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+#textoQueOhana{
+    font-family: 'Raleway', sans-serif;
+    color: #131f28;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.titulo{
+    background-color: transparent;
+}
+
+#que{
+    padding: 4.375em 0;
+    position: relative;
+    z-index: 3;
+    display: block;
+    background-color: #FFFFFF;
+}
+
+#queOhana{
+    font-size: 2.65em;
+    text-align: center;
+    font-weight: bold;
+    color: #1D8D6D;
+    font-family: 'Lato', sans-serif;
+}
+
+/*fondos en slideshow: empieza*/
+.toggle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 692px;
+    transition: opacity 1s ease-in-out;
+}
+
+.primera-im {
+    background-image: image-url('jascha-huisman-74571.jpg');
+    z-index: -5;
+    opacity: 0;
+}
+
+.segunda-im {
+    background-image: image-url('haley-phelps-119780.jpg');
+    z-index: -4;
+    opacity: 0;
+}
+
+.tercera-im {
+    background-image: image-url('kari-shea-109894.jpg');
+    z-index: -3;
+    opacity: 0;
+}
+
+.cuarta-im {
+    background-image: image-url('john-towner-125995.jpg');
+    z-index: -2;
+    opacity: 0;
+}
+
+.quinta-im {
+    background-image: image-url('james-stamler-153583.jpg');
+    z-index: -1;
+    opacity: 0;
+}
+
+.primera-im.show {
+    opacity: 1;
+}
+
+.segunda-im.show {
+    opacity: 1;
+}
+
+.tercera-im.show {
+    opacity: 1;
+}
+
+.cuarta-im.show {
+    opacity: 1;
+}
+
+.quinta-im.show {
+    opacity: 1;
+}
+/*fondos en slide show: acaba*/
 
 @media (max-width: 767px) { 
     .enca{
@@ -99,6 +241,10 @@ button.lupaB:active{
     }
 }
 @media (min-width: 1200px) {
+    .barraBusq{
+        padding-left: 7em;
+    }
+
     .encaH4{
         padding-top: 0px;
         padding-bottom: 0.75em;
@@ -113,8 +259,9 @@ button.lupaB:active{
         line-height: 43px;
     }
 
-    .barraBusq{
-        padding-left: 7em;
+    .flechita{
+        font-size: 60px;
+        padding-top: 2em;
     }
 
     .lupa{
@@ -125,13 +272,16 @@ button.lupaB:active{
         padding-bottom: 2px;
     }
 
-    .flechita{
-        font-size: 60px;
-        padding-top: 2em;
+    .menuOhana{
+        height: 4em;
     }
 
     .navbar-default .ulNav > li > a,
     .navbar-default .ulNav > .active > a{
         margin-left: 2em;
+    }
+
+    .ulNav{
+        padding-top: 0.3em;
     }
 }

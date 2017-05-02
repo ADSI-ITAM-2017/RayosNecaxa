@@ -1,0 +1,158 @@
+/* line 4, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 8, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.centro {
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 13, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.encaG {
+  color: #eee;
+  font-weight: 300;
+}
+
+/* line 18, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.flechita {
+  font-size: 60px;
+  color: #c7d500;
+  padding-top: 2em;
+}
+
+/* line 24, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.logoHead {
+  width: 57%;
+}
+
+/* line 28, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB {
+  background-color: #9DAA0A;
+  color: #eee;
+  border-color: #9DAA0A;
+}
+
+/* line 34, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:hover {
+  background-color: #B5EE72;
+  color: #eee;
+}
+
+/* line 39, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:hover {
+  background-color: #d5ff87;
+  color: #eee;
+}
+
+/* line 44, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:active {
+  background-color: #c7d500;
+  color: #eee;
+}
+
+/* line 49, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.menuOhana {
+  background-color: transparent;
+  border-color: transparent;
+  margin-top: 0.3em;
+}
+
+/* line 55, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.navbar-default .ulNav > li > a {
+  background-color: transparent;
+  color: #eee;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 62, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.navbar-default .ulNav > li > a:hover,
+.navbar-default .ulNav > li > a:focus {
+  border-bottom: 2px solid #B5EE72;
+  color: #d5ff87;
+}
+
+/* line 68, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.navbar-default .ulNav > .active > a {
+  background-color: transparent;
+  border-bottom: 2px solid #c7d500;
+  color: #eee;
+}
+
+/* line 74, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.navbar-default .ulNav > .active > a:hover,
+.navbar-default .ulNav > .active > a:focus {
+  background-color: transparent;
+  border-bottom: 2px solid #c7d500;
+  color: #e7febd;
+}
+
+/* line 81, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.titulo {
+  background-color: #131f28;
+}
+
+@media (max-width: 767px) {
+  /* line 86, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 6.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 91, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 7em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 96, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 8.5em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 101, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .encaH4 {
+    padding-top: 0px;
+    padding-bottom: 0.75em;
+    padding-left: 5.65em;
+    line-height: 27px;
+  }
+
+  /* line 108, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .encaH1 {
+    padding-top: 7em;
+    padding-left: 2.65em;
+    padding-bottom: 0px;
+    line-height: 43px;
+  }
+
+  /* line 115, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .barraBusq {
+    padding-left: 7em;
+  }
+
+  /* line 119, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .lupa {
+    font-size: 20px;
+  }
+
+  /* line 123, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .lupaB {
+    padding-bottom: 2px;
+  }
+
+  /* line 127, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .flechita {
+    font-size: 60px;
+    padding-top: 2em;
+  }
+
+  /* line 132, C:/Users/Pablo/Documents/GitHub/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .navbar-default .ulNav > li > a,
+  .navbar-default .ulNav > .active > a {
+    margin-left: 2em;
+  }
+}

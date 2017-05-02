@@ -12,3 +12,7 @@ Rails.application.config.assets.version = '1.0'
 %w( landing_page ).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
 end
+
+%w( swipe_propiedades ).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
+end
