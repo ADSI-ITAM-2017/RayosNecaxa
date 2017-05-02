@@ -20,7 +20,7 @@ $ ->
       scroll_start = $(this).scrollTop()
       if scroll_start > offset.top-1
         $('.navbar-default').css 'background-color', '#131f28'
-        if scroll_start < offs.top
+        if scroll_start < offs.top-5
           $('#liInicio').removeClass 'active'
           $('#liQue').addClass 'active'
           $('#liComo').removeClass 'active'
@@ -34,6 +34,10 @@ $ ->
         $('#liQue').removeClass 'active'
         $('#liComo').removeClass 'active'
       return
+  return
+
+$ ->
+  $(document).scroll()
   return
 
 cycleBackgrounds = ->
