@@ -58,19 +58,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.flecha{
-    display: inline-block;
-    text-align: center;
-}
-
 .flechita{
     font-size: 60px;
     color: #c7d500;
     padding-top: 2em;
-}
-
-.logoHead{
-    width: 50%;
 }
 
 button.lupaB{
@@ -92,54 +83,6 @@ button.lupaB:hover{
 button.lupaB:active{
     background-color: #c7d500;
     color: #eee
-}
-
-.menuOhana{
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.navbar-default .ulNav > li > a{
-    background-color: transparent;
-    color: #eee;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.navbar-default .ulNav > li > a:hover,
-.navbar-default .ulNav > li > a:focus {
-    border-bottom: 2px solid #B5EE72;
-    color: #d5ff87;
-}
-
-.navbar-default .ulNav > .active > a {
-    background-color: transparent;
-    border-bottom: 2px solid #c7d500;
-    color: #eee;
-}
-
-.navbar-default .ulNav > .active > a:hover,
-.navbar-default .ulNav > .active > a:focus{
-    background-color: transparent;
-    border-bottom: 2px solid #c7d500;
-    color: #e7febd;
-}
-
-.separator-container{
-    text-align: center;
-    position: relative;
-}
-
-.separator-v{
-    margin: 2em auto 2em;
-    width: 11em;
-    border: 1px groove #c7d500;
-}
-
-.separator-b{
-    margin: 2em auto 2em;
-    width: 11em;
-    border: 1px groove #333844;
 }
 
 .sinBg{
