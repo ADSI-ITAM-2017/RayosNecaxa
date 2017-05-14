@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechares: 2017-05-14
+  propiedad: one
+  arrendatario: one
+
+two:
+  fechares: 2017-05-14
+  propiedad: two
+  arrendatario: two

@@ -1,2 +1,0 @@
-class Familium < ApplicationRecord
-end
