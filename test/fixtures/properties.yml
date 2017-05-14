@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
-  direccion: MyString
-  precio: 1
+  title: MyString
+  description: MyText
+  dir: MyString
+  price: 1
   arrendador: one
 
 two:
-  nombre: MyString
-  direccion: MyString
-  precio: 1
+  title: MyString
+  description: MyText
+  dir: MyString
+  price: 1
   arrendador: two

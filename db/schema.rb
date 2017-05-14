@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514211554) do
+ActiveRecord::Schema.define(version: 20170514232522) do
 
   create_table "arrendadors", force: :cascade do |t|
     t.integer  "numprop"
@@ -39,14 +39,15 @@ ActiveRecord::Schema.define(version: 20170514211554) do
     t.index ["propiedad_id"], name: "index_likes_on_propiedad_id"
   end
 
-  create_table "propiedads", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "direccion"
-    t.integer  "precio"
+  create_table "properties", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "dir"
+    t.integer  "price"
     t.integer  "arrendador_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["arrendador_id"], name: "index_propiedads_on_arrendador_id"
+    t.index ["arrendador_id"], name: "index_properties_on_arrendador_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
