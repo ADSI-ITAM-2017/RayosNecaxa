@@ -1,0 +1,26 @@
+<h1>Edita propiedad</h1>
+<%= form_for :property, url: property_path(@property), method: :patch do |f| %>
+	<% if @property.errors.any? %>
+		<% @property.errors.full_messages.each do |msg| %>
+			<div class = "alert alert-danger"><%= msg %></div>
+			<% end %>
+		<% end %>
+		
+
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field(:title, {:class => 'form-control'}) %>
+	</p>
+	<p>
+		<%= f.label :price %><br>
+		<%= f.number_field(:price, {:class => 'form-control'}) %>
+	</p>
+	<p>
+		<%= f.label :description%><br>
+		<%= f.text_area(:description,{:class => 'form-control'})%>
+	</p>
+
+	<p>
+		<%= f.submit({:class => 'btn btn-primary'}) %>
+	</p>
+<% end %>

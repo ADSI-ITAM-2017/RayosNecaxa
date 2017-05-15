@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514232522) do
+ActiveRecord::Schema.define(version: 20170514235239) do
 
   create_table "arrendadors", force: :cascade do |t|
     t.integer  "numprop"
@@ -45,8 +45,12 @@ ActiveRecord::Schema.define(version: 20170514232522) do
     t.string   "dir"
     t.integer  "price"
     t.integer  "arrendador_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["arrendador_id"], name: "index_properties_on_arrendador_id"
   end
 

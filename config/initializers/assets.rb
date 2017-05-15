@@ -13,6 +13,11 @@ Rails.application.config.assets.version = '1.0'
   Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
 end
 
-%w( swipe_propiedades ).each do |controller|
+%w( galleries ).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
 end
+
+%w( properties ).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
+end
+

@@ -1,0 +1,9 @@
+<h1>Propiedades</h1>
+
+<% @properties.each do |property| %>
+<div class="well">
+  <h3><%= property.title %></h3>
+  <p><%= property.description %></p>
+  <%= link_to "Más información", property_path(property), :class => 'btn btn-default' %>
+</div>
+<% end %>	

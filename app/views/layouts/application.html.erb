@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet"> 
@@ -48,6 +48,8 @@
             <li id="liQue"> <%= link_to '¿Qué es Ohana?', root_path + "#que", id: "linkQue" %> </li>
             <li id="liComo"> <%= link_to '¿Cómo funciona Ohana?', root_path + "#como", id: "linkComo" %> </li>
             <li id="liIniSes"> <%= link_to 'Iniciar sesión', root_path + "#", id: "linkIniSes" %> </li> 
+            <li> <%= link_to "Mis propiedades", properties_path %></li>
+            <li> <%= link_to "Agregar propiedad", new_property_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

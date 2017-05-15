@@ -1,0 +1,12 @@
+<h2><%= @property.title %></h2>
+
+<%= image_tag @property.image.url(:medium)%>
+
+
+<p><%= @property.description %></p>
+
+
+<hr>
+<%= link_to "Editar", edit_property_path(@property), :class => 'btn btn-default' %>
+<%= link_to "Eliminar", property_path(@property),method: :delete, data: {confirm: 'Estas seguro?'}, :class => 'btn btn-danger' %>
+<hr>
