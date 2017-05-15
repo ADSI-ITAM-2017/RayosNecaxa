@@ -88,7 +88,6 @@ $(document).ready ->
 registraSwipe = ->
   propId = $('#secretito').text()
   arrId = $('#secretito2').text()
-  alert propId + ' - ' + arrId
   $.ajax
     type: 'POST'
     url: '/likes'
