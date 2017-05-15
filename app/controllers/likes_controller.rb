@@ -8,18 +8,13 @@ class LikesController < ApplicationController
 	end
 
 	def new
-		r=Like.where(propiedad_id: params[:propiedad_id], arrendatario_id: params[:arrendatario_id])
-		if(r.count==0)
-			@like = Like.new
+		@like = Like.new
 
 	end
 
 	def create
-		r=Like.where(propiedad_id: params[:propiedad_id], arrendatario_id: params[:arrendatario_id])
-		puts 'R: '+r.count.to_s
-		if(r.count==0)
-			@like = Like.new(like_params)
-			@like.save
+		@like = Like.new(like_params)
+		@like.save
 	end
 
 	def edit
