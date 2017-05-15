@@ -1,27 +1,15 @@
+
 <div>
   <div class="demo">
     <header class="demo__header"></header>
     <div class="demo__content">
       <div class="demo__card-cont">
 
-<div class="demo__card">
-        <div class="demo__card__top lime">
-          <div class="demo__card__img"></div>
-          <p class="demo__card__name">Hungry cat 5</p>
-        </div>
-        <div class="demo__card__btm">
-          <p class="demo__card__we">Whatever</p>
-        </div>
-        <div class="demo__card__choice m--reject"></div>
-        <div class="demo__card__choice m--like"></div>
-        <div class="demo__card__drag"></div>
-      </div>
-       <% @properties.each do |property| %>
-
-
+      <% @properties.each do |property| %>
        <div class="demo__card">
-       <p hidden=><%=property.id%></p>
-        <div class="demo__card__top blue">
+         <p id="secretito" hidden=><%=property.id%></p>
+         <p id="secretito2" hidden=><%=@arrId%></p>
+         <div class="demo__card__top blue">
           <p class="demo__card__name"><%= property.title %></p>
 
           <div class="demo__card__img">

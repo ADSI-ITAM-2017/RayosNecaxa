@@ -1,0 +1,8 @@
+<h1>Favoritos</h1>
+
+<% @likes.each do |like| %>
+<div class="well">
+  <h3><%= like.propiedad_id %></h3>
+  <p><%= like.arrendatario_id %></p>
+</div>
+<% end %>	

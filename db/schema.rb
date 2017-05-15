@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515005613) do
+ActiveRecord::Schema.define(version: 20170515065832) do
 
   create_table "arrendadors", force: :cascade do |t|
     t.integer  "numprop"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20170515005613) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.date     "fechares"
     t.integer  "propiedad_id"
     t.integer  "arrendatario_id"
     t.datetime "created_at",      null: false
@@ -57,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170515005613) do
   create_table "usuarios", force: :cascade do |t|
     t.string   "nombre"
     t.string   "apellido"
-    t.string   "rol"                                  
+    t.string   "rol"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false

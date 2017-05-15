@@ -17,7 +17,6 @@ class PropertiesController < ApplicationController
 	def create
 		#render plain: params[:property].inspect
 		arr = Arrendador.where(usuario_id:current_usuario.id).first
-		print arr.id
 		@property = Property.new(property_params.merge(arrendador_id: arr.id))
 		if(@property.save)
 			redirect_to @property
