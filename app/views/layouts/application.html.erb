@@ -47,8 +47,10 @@
             <li id="liInicio"> <%= link_to 'Inicio', root_path, id: "linkInicio" %> </li>
             <li id="liQue"> <%= link_to '¿Qué es Ohana?', root_path + "#que", id: "linkQue" %> </li>
             <li id="liComo"> <%= link_to '¿Cómo funciona Ohana?', root_path + "#como", id: "linkComo" %> </li>
-            <li> <%= link_to "Mis propiedades", properties_path %></li>
-            <li> <%= link_to "Agregar propiedad", new_property_path %></li>
+            <% if rol_usuario == 'Arrendador' %>
+                <li> <%= link_to "Mis propiedades", properties_path %></li>
+                <li> <%= link_to "Agregar propiedad", new_property_path %></li>
+            <% end %>
             <% if usuario_signed_in? %>
                   <li>
                   <%= link_to('Cerrar sesión', destroy_usuario_session_path, :method => :delete) %>        
