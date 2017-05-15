@@ -14,7 +14,7 @@ Rails.application.config.assets.version = '1.0'
 end
 
 %w( galleries ).each do |controller|
-  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
+  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css","#{controller}.js"]
 end
 
 %w( properties ).each do |controller|

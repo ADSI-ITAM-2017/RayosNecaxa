@@ -47,13 +47,30 @@
             <li id="liInicio"> <%= link_to 'Inicio', root_path, id: "linkInicio" %> </li>
             <li id="liQue"> <%= link_to '¿Qué es Ohana?', root_path + "#que", id: "linkQue" %> </li>
             <li id="liComo"> <%= link_to '¿Cómo funciona Ohana?', root_path + "#como", id: "linkComo" %> </li>
-            <li id="liIniSes"> <%= link_to 'Iniciar sesión', root_path + "#", id: "linkIniSes" %> </li> 
             <li> <%= link_to "Mis propiedades", properties_path %></li>
             <li> <%= link_to "Agregar propiedad", new_property_path %></li>
+            <% if usuario_signed_in? %>
+                  <li>
+                  <%= link_to('Cerrar sesión', destroy_usuario_session_path, :method => :delete) %>        
+                  </li>
+                <% else %>
+                  <li>
+                  <%= link_to('Iniciar sesión', new_usuario_session_path)  %>  
+                  </li>
+                  <li>
+                  <%= link_to('Crear cuenta', new_usuario_registration_path)  %>
+                  </li>
+            <% end %>
+
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    
+      
+    
     <%= yield %>
   </body>
 

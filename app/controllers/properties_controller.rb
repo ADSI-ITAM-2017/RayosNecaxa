@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
 
+
 	def index
 		@properties = Property.all()
 
@@ -15,7 +16,9 @@ class PropertiesController < ApplicationController
 
 	def create
 		#render plain: params[:property].inspect
-		@property = Property.new(property_params)
+		arr = Arrendador.where(usuario_id:current_usuario.id).first
+		print arr.id
+		@property = Property.new(property_params.merge(arrendador_id: arr.id))
 		if(@property.save)
 			redirect_to @property
 		else
@@ -44,7 +47,8 @@ class PropertiesController < ApplicationController
 	end
 
 	private def property_params
-		params.require(:property).permit(:title,:price,:description,:image)
 		
+		params.require(:property).permit(:title,:price,:description,:image)
+
 	end
 end
