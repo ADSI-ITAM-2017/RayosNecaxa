@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'landing_page/index'
   root 'landing_page#index'
 
+  get 'signup' => 'registrations#new'
+  get 'signin' => 'sessions#new'
   get 'galleries' => 'galleries#index'
   get 'likes/new' => 'likes#new'
   get 'likes/create' => 'likes#create'
