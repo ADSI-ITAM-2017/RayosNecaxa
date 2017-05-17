@@ -1,48 +1,53 @@
-<h2>Sign up</h2>
+<h2>Crear cuenta</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :nombre %><br />
-    <%= f.text_field :nombre, autofocus: true %>
+    <%= f.text_field :nombre, autofocus: true, :class => "form-control", :placeholder => "Ingrese su nombre", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :apellido %><br />
-    <%= f.text_field :apellido, autofocus: true %>
+    <%= f.text_field :apellido, autofocus: true, :class => "form-control", :placeholder => "Ingrese su apellido", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-  <div>
-    <%= f.label 'Arrendador'%>
-    <%= f.radio_button :rol, 'Arrendador'%>
-    <%= f.label 'Arrendatario'%>
-    <%= f.radio_button :rol, 'Arrendatario'%>
-
+    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Ingrese su email", :required => true %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="radio">
+    <label>
+      <%= f.radio_button :rol, 'Arrendador'%>
+      Arrendador
+    </label> 
+  </div>
+
+  <div class="radio">
+    <label>
+      <%= f.radio_button :rol, 'Arrendatario'%>
+      Arrendatario
+    </label> 
+  </div>
+
+  <div class="field form-group">
+    <%= f.label 'Contraseña'%>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <p class="help-block">(<%= @minimum_password_length %> caracteres mínimo)</p>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Ingrese su contraseña", :required => true %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="field form-group">
+    <%= f.label 'Confirme su contraseña' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Repita su contraseña", :required => true %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Registrarse", :class => "btn btn-default" %>
   </div>
 <% end %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<div class="alert alert-warning notice" role="alert"><%= notice %></div>
+<div class="alert alert-danger alert" role="alert"><%= alert %></p>
 
 <%= render "devise/shared/links" %>
