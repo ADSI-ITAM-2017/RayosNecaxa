@@ -8,13 +8,17 @@ class LikesController < ApplicationController
 	end
 
 	def new
-		@like = Like.new
+		if(current_usuario!=null)
+			@like = Like.new
+		end
 
 	end
 
 	def create
-		@like = Like.new(like_params)
-		@like.save
+		if(current_usuario!=null)
+			@like = Like.new(like_params)
+			@like.save
+		end
 	end
 
 	def edit

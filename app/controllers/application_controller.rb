@@ -13,15 +13,20 @@ protect_from_forgery with: :null_session
   end
 
   def permiso_arrendador
-  	@rolUsuario = Usuario.where(id:current_usuario.id).first.rol
-  	if(@rolUsuario != 'Arrendador' || current_usuario.blank?)
-		    redirect_to('/')
+    if(!current_usuario_usuario.blank?)
+    	@rolUsuario = Usuario.where(id:current_usuario.id).first.rol
+    	if(@rolUsuario != 'Arrendador' || current_usuario.blank?)
+  		    redirect_to('/')
+      end
     end
+
   end
   def permiso_arrendatario
-    @rolUsuario = Usuario.where(id:current_usuario.id).first.rol
-    if(@rolUsuario != 'Arrendatario' || current_usuario.blank?)
-        redirect_to('/')
+    if(!current_usuario_usuario.blank?)
+        @rolUsuario = Usuario.where(id:current_usuario.id).first.rol
+        if(@rolUsuario != 'Arrendatario' || current_usuario.blank?)
+            redirect_to('/')
+        end
     end
   end
   def rol_usuario 
