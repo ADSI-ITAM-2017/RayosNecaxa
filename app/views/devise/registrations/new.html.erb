@@ -2,17 +2,17 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="field form-group">
-    <%= f.label :nombre %><br />
+    <%= f.label :nombre %>
     <%= f.text_field :nombre, autofocus: true, :class => "form-control", :placeholder => "Ingrese su nombre", :required => true %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :apellido %><br />
+    <%= f.label :apellido %>
     <%= f.text_field :apellido, autofocus: true, :class => "form-control", :placeholder => "Ingrese su apellido", :required => true %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Ingrese su email", :required => true %>
   </div>
 
@@ -34,12 +34,12 @@
     <%= f.label 'Contraseña'%>
     <% if @minimum_password_length %>
     <p class="help-block">(<%= @minimum_password_length %> caracteres mínimo)</p>
-    <% end %><br />
+    <% end %>
     <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Ingrese su contraseña", :required => true %>
   </div>
 
   <div class="field form-group">
-    <%= f.label 'Confirme su contraseña' %><br />
+    <%= f.label 'Confirme su contraseña' %>
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Repita su contraseña", :required => true %>
   </div>
 
@@ -47,7 +47,13 @@
     <%= f.submit "Registrarse", :class => "btn btn-default" %>
   </div>
 <% end %>
-<div class="alert alert-warning notice" role="alert"><%= notice %></div>
-<div class="alert alert-danger alert" role="alert"><%= alert %></p>
+<% unless notice.nil? %>
+  <div class="alert alert-warning notice" role="alert"><%= notice %></div>
+<% end %>
+<% unless alert.nil? %>
+  <div class="alert alert-danger alert" role="alert"><%= alert %></p>
+<% end %>
 
-<%= render "devise/shared/links" %>
+<a href="/usuarios/sign_in" class="btn btn-default" role="button" aria-pressed="true">Iniciar sesión</a>
+
+
