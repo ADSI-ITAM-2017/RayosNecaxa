@@ -64,15 +64,12 @@ gem 'devise'
 
 gem 'bcrypt-ruby'
 
-group :development do
-    # Use sqlite3 as the database for Active Record
-    gem 'sqlite3'
+group :production do    
+    gem 'pg', '0.12.2'  
+end  
+group :development do  
+    gem 'sqlite3', '1.3.4'  
 end
-
-group :production do 
-    gem 'pg'
-    gem 'rails_12factor'
-end 
 
 
 
