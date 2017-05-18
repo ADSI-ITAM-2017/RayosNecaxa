@@ -1,0 +1,281 @@
+/* line 4, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 10, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+body {
+  position: relative;
+}
+
+/* line 14, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.btn-comienzo {
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  margin-top: 1em;
+  font-size: 22px;
+  width: 9em;
+  color: #131f28;
+  box-shadow: 3px 3px 4px 1px #131f28;
+}
+
+/* line 30, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.centro {
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 35, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#como {
+  padding: 4.375em 0;
+  position: relative;
+  z-index: 3;
+  display: block;
+  background-color: #1D8D6D;
+}
+
+/* line 43, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#comoOhana {
+  font-size: 2.65em;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 51, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.conBg {
+  background-color: #131f28;
+}
+
+/* line 55, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.encaG {
+  color: #eee;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 61, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.flechita {
+  font-size: 60px;
+  color: #c7d500;
+  padding-top: 2em;
+}
+
+/* line 67, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB {
+  background-color: #9DAA0A;
+  color: #eee;
+  border-color: #9DAA0A;
+}
+
+/* line 73, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:hover {
+  background-color: #B5EE72;
+  color: #eee;
+}
+
+/* line 78, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:hover {
+  background-color: #d5ff87;
+  color: #eee;
+}
+
+/* line 83, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+button.lupaB:active {
+  background-color: #c7d500;
+  color: #eee;
+}
+
+/* line 88, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.sinBg {
+  background-color: transparent;
+}
+
+/* line 92, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#textoComoOhana {
+  font-family: 'Raleway', sans-serif;
+  color: #d8d8d8;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+/* line 99, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#textoQueOhana {
+  font-family: 'Raleway', sans-serif;
+  color: #131f28;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+/* line 106, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.titulo {
+  background-color: transparent;
+}
+
+/* line 110, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#que {
+  padding: 4.375em 0;
+  position: relative;
+  z-index: 3;
+  display: block;
+  background-color: #FFFFFF;
+}
+
+/* line 118, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+#queOhana {
+  font-size: 2.65em;
+  text-align: center;
+  font-weight: bold;
+  color: #1D8D6D;
+  font-family: 'Lato', sans-serif;
+}
+
+/*fondos en slideshow: empieza*/
+/* line 127, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.toggle-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 692px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* line 136, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.primera-im {
+  background-image: url(/assets/jascha-huisman-74571-f99d2891a8ed77612667889a7a46d333457e2ea58fe1ebb848ec98f30b834383.jpg);
+  z-index: -5;
+  opacity: 0;
+}
+
+/* line 142, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.segunda-im {
+  background-image: url(/assets/haley-phelps-119780-8ce755d402d660a73d8755cbd05c156f945f399cd931f62b5fba74233435f76c.jpg);
+  z-index: -4;
+  opacity: 0;
+}
+
+/* line 148, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.tercera-im {
+  background-image: url(/assets/kari-shea-109894-2d75440a680c19f52b1bc5177ca1ceae4f7479925d80929bbea585645f28d078.jpg);
+  z-index: -3;
+  opacity: 0;
+}
+
+/* line 154, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.cuarta-im {
+  background-image: url(/assets/john-towner-125995-f72837e1358801086c9418ecccec94994df33a9c30e983516c8275c8baca3fe8.jpg);
+  z-index: -2;
+  opacity: 0;
+}
+
+/* line 160, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.quinta-im {
+  background-image: url(/assets/james-stamler-153583-d75826d3b1d25b20765dd6078905ee78e191b94ac059cef5c18a930b4b612516.jpg);
+  z-index: -1;
+  opacity: 0;
+}
+
+/* line 166, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.primera-im.show {
+  opacity: 1;
+}
+
+/* line 170, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.segunda-im.show {
+  opacity: 1;
+}
+
+/* line 174, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.tercera-im.show {
+  opacity: 1;
+}
+
+/* line 178, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.cuarta-im.show {
+  opacity: 1;
+}
+
+/* line 182, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+.quinta-im.show {
+  opacity: 1;
+}
+
+/*fondos en slide show: acaba*/
+@media (max-width: 767px) {
+  /* line 188, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 6.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 193, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 7em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 198, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .enca {
+    padding-top: 8.5em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 203, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .barraBusq {
+    padding-left: 7em;
+  }
+
+  /* line 207, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .encaH4 {
+    padding-top: 0px;
+    padding-bottom: 0.75em;
+    padding-left: 5.65em;
+    line-height: 27px;
+  }
+
+  /* line 214, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .encaH1 {
+    padding-top: 7em;
+    padding-left: 2.65em;
+    padding-bottom: 0px;
+    line-height: 43px;
+  }
+
+  /* line 221, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .flechita {
+    font-size: 60px;
+    padding-top: 2em;
+  }
+
+  /* line 226, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .lupa {
+    font-size: 20px;
+  }
+
+  /* line 230, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .lupaB {
+    padding-bottom: 2px;
+  }
+
+  /* line 234, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .menuOhana {
+    height: 4em;
+  }
+
+  /* line 238, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .navbar-default .ulNav > li > a,
+  .navbar-default .ulNav > .active > a {
+    margin-left: 2em;
+  }
+
+  /* line 243, /home/pedro/Projects/RoR/RayosNecaxa/app/assets/stylesheets/landing_page.scss */
+  .ulNav {
+    padding-top: 0.3em;
+  }
+}
