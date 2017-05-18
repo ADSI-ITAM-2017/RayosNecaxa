@@ -1,59 +1,75 @@
-<h2>Crear cuenta</h2>
+<div class="container center-block padCont"> 
+  <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3">   
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2 class="crearH2">Crear cuenta</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <div class="field form-group">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre, autofocus: true, :class => "form-control", :placeholder => "Ingrese su nombre", :required => true %>
+        <div class="container">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="field form-group">
+              <%= f.label :nombre %>
+              <%= f.text_field :nombre, autofocus: true, :class => "form-control", :placeholder => "Ingrese su nombre", :required => true %>
+            </div>
+
+            <div class="field form-group">
+              <%= f.label :apellido %>
+              <%= f.text_field :apellido, autofocus: true, :class => "form-control", :placeholder => "Ingrese su apellido", :required => true %>
+            </div>
+
+            <div class="field form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Ingrese su email", :required => true %>
+            </div>
+
+            <div class="radio">
+              <label>
+                <%= f.radio_button :rol, 'Arrendador'%>
+                Arrendador
+              </label> 
+            </div>
+
+            <div class="radio">
+              <label>
+                <%= f.radio_button :rol, 'Arrendatario'%>
+                Arrendatario
+              </label> 
+            </div>
+
+            <div class="field form-group">
+              <%= f.label 'Contraseña'%>
+              <% if @minimum_password_length %>
+              <p class="help-block">(<%= @minimum_password_length %> caracteres mínimo)</p>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Ingrese su contraseña", :required => true %>
+            </div>
+
+            <div class="field form-group">
+              <%= f.label 'Confirme su contraseña' %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Repita su contraseña", :required => true %>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="actions">
+                  <%= f.submit "Registrarse", :class => "btn btn-default confirmBtn" %>
+                </div>
+              </div>
+              <div class="col-lg-offset-3 col-lg-3">
+                <a href="/usuarios/sign_in" class="btn btn-default loginBtn" role="button" aria-pressed="true">Iniciar sesión</a>
+              </div>
+            </div>
+            
+          <% end %>
+          
+        </div>
+        <!--<% unless notice.nil? %>
+          <div class="alert alert-warning notice" role="alert"><%= notice %></div>
+        <% end %>
+        <% unless alert.nil? %>
+          <div class="alert alert-danger alert" role="alert"><%= alert %></p>
+        <% end %>-->
+      </div>
+    </div>
   </div>
-
-  <div class="field form-group">
-    <%= f.label :apellido %>
-    <%= f.text_field :apellido, autofocus: true, :class => "form-control", :placeholder => "Ingrese su apellido", :required => true %>
-  </div>
-
-  <div class="field form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Ingrese su email", :required => true %>
-  </div>
-
-  <div class="radio">
-    <label>
-      <%= f.radio_button :rol, 'Arrendador'%>
-      Arrendador
-    </label> 
-  </div>
-
-  <div class="radio">
-    <label>
-      <%= f.radio_button :rol, 'Arrendatario'%>
-      Arrendatario
-    </label> 
-  </div>
-
-  <div class="field form-group">
-    <%= f.label 'Contraseña'%>
-    <% if @minimum_password_length %>
-    <p class="help-block">(<%= @minimum_password_length %> caracteres mínimo)</p>
-    <% end %>
-    <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Ingrese su contraseña", :required => true %>
-  </div>
-
-  <div class="field form-group">
-    <%= f.label 'Confirme su contraseña' %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Repita su contraseña", :required => true %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Registrarse", :class => "btn btn-default" %>
-  </div>
-<% end %>
-<% unless notice.nil? %>
-  <div class="alert alert-warning notice" role="alert"><%= notice %></div>
-<% end %>
-<% unless alert.nil? %>
-  <div class="alert alert-danger alert" role="alert"><%= alert %></p>
-<% end %>
-
-<a href="/usuarios/sign_in" class="btn btn-default" role="button" aria-pressed="true">Iniciar sesión</a>
+</div>
 
 
