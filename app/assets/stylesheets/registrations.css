@@ -1,0 +1,38 @@
+body{
+    background-color: #333B44;
+}
+
+.confirmBtn{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 1em;
+    width: 9em;
+    color: white;
+    box-shadow: 3px 3px 2px 1px rgb(19, 31, 40);
+    background-color: rgb(29, 141, 109);
+    border-color: rgb(29, 141, 109);
+}
+
+h2.crearH2{
+    margin-top: 0px;
+    margin-bottom: 19px;
+}
+
+.loginBtn{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 1em;
+    width: 9em;
+    color: rgb(29, 141, 109);
+    box-shadow: 3px 3px 2px 1px rgb(19, 31, 40);
+    margin-left: -1.8em;
+}
+
+.menuOhana{  
+    background-color: rgb(19, 31, 40);
+}
+
+.padCont{
+    padding-top: 122px;
+    display: block;
+}
