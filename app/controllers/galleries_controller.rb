@@ -1,4 +1,5 @@
 class GalleriesController < ApplicationController
+	before_action :authenticate_usuario!
 	before_action :permiso_arrendatario
 	def index
 		if (current_usuario!=nil)

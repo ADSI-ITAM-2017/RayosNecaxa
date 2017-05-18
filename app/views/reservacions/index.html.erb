@@ -1,0 +1,10 @@
+<h3>Información de reservaciones</h3>
+
+<% @reservaciones.each do |res| %>
+<div class="well">
+  <p>Arrendador: <%= Usuario.find(Arrendador.find(res.id_arrendador).id).email %></p>
+<p>Arrendatario: <%= Usuario.find(Arrendatario.find(res.id_arrendatario).id).email %></p>
+  <p>Fecha de reservación: <%= res.created_at %></p>
+  <%= link_to "Más información", reservacion_path(res), :class => 'btn btn-default' %>
+</div>
+<% end %>	

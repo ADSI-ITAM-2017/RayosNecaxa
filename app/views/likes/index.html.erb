@@ -1,8 +1,21 @@
-<h1>Favoritos</h1>
+
+<%= button_to('Explorar', galleries_path, method: :get , class: "btn btn-default btn-lg")%>
+
+</br>
+<h3>Favoritos</h3>
+
+
+
 
 <% @likes.each do |like| %>
 <div class="well">
-  <h3><%= like.propiedad_id %></h3>
-  <p><%= like.arrendatario_id %></p>
+  <p>Título de la propiedad: <%= Property.find(like.propiedad_id).title %></p>
+  <p>Precio: $<%= Property.find(like.propiedad_id).price %></p>
+  <p>Arrendador: <%= Usuario.find(Arrendador.find(Property.find(like.propiedad_id).arrendador_id).usuario_id).email %></p>
+  <p>Descripción: <%= Property.find(like.propiedad_id).description%></p>
+  <%= button_to('Contactar a propietario', new_mensaje_path, method: :get , class: "btn btn-default btn-lg")%>
+  </br>
+  <%= link_to "Eliminar", like_path(like),method: :delete, data: {confirm: 'Estas seguro?'}, :class => 'btn btn-danger' %>
 </div>
+
 <% end %>	

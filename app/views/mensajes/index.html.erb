@@ -1,0 +1,17 @@
+<h3>Bandeja de entrada</h3>
+</br>
+<% @mensajes.each do |mensaje| %>
+<div class="well">
+  <h4><%= mensaje.titulo %></h4>
+  <p><%= mensaje.mensaje %></p>
+  <%= link_to "Más información", mensaje_path(mensaje), :class => 'btn btn-default' %>
+  </br>
+  </br>
+  <p><%= mensaje.created_at %></p>
+  
+  <%= button_to('Responder', new_mensaje_path, method: :get , class: "btn btn-primary btn-med ")%>
+
+  </div>
+</div>
+
+<% end %>	

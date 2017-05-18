@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518025611) do
+ActiveRecord::Schema.define(version: 20170518071822) do
 
   create_table "arrendadors", force: :cascade do |t|
     t.integer  "numprop"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20170518025611) do
     t.index ["propiedad_id"], name: "index_likes_on_propiedad_id"
   end
 
+  create_table "mensajes", force: :cascade do |t|
+    t.datetime "horaEnvio"
+    t.string   "titulo"
+    t.text     "mensaje"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "id_arrendador"
+    t.integer  "id_arrendatario"
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -51,6 +61,15 @@ ActiveRecord::Schema.define(version: 20170518025611) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.index ["arrendador_id"], name: "index_properties_on_arrendador_id"
+  end
+
+  create_table "reservacions", force: :cascade do |t|
+    t.date     "fechaIni"
+    t.date     "fechaFin"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "id_arrendador"
+    t.integer  "id_arrendatario"
   end
 
   create_table "usuarios", force: :cascade do |t|

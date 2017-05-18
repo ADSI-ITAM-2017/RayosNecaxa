@@ -29,3 +29,10 @@ end
   Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
 end
 
+%w( mensajes ).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
+end
+
+%w( reservacions ).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js.coffee", "#{controller}.css"]
+end

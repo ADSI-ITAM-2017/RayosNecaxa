@@ -1,0 +1,25 @@
+<h3>Enviar un mensaje</h3>
+
+<%= form_for :mens, url: mensajes_path do |f| %>
+	<% if @mensaje.errors.any? %>
+		<% @mensaje.errors.full_messages.each do |msg| %>
+			<div class = "alert alert-danger"><%= msg %></div>
+			<% end %>
+		<% end %>
+	</br>
+	<p>
+	<%= f.label :usr, 'Usuario a contactar' %><br>
+	<%= f.select :usr, @usuarios.collect {|p| [ p.nombre, p.id ] } %>
+	</p>	
+
+	
+	<p>
+		<%= f.label :titulo, 'Título' %><br>
+		<%= f.text_field(:titulo, {:class => 'form-control'}) %>
+	</p>
+	<p>
+		<%= f.label :mensaje, 'Descripción' %><br>
+		<%= f.text_area(:mensaje,{:class => 'form-control'})%>
+	</p>
+	<%= f.submit({value:'Enviar', :class => 'btn btn-primary'}) %>
+<% end %>

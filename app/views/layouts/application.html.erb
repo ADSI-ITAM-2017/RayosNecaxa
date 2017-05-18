@@ -38,10 +38,7 @@
             <li id="liInicio"> <%= link_to 'Inicio', root_path, id: "linkInicio" %> </li>
             <li id="liQue"> <%= link_to '¿Qué es Ohana?', root_path + "#que", id: "linkQue" %> </li>
             <li id="liComo"> <%= link_to '¿Cómo funciona Ohana?', root_path + "#como", id: "linkComo" %> </li>
-            <% if rol_usuario == 'Arrendador' %>
-                <li> <%= link_to "Mis propiedades", properties_path %></li>
-                <li> <%= link_to "Agregar propiedad", new_property_path %></li>
-            <%else%>
+            <% if rol_usuario == 'Arrendatario' %>
                 <li> <%= link_to "Explorar", galleries_path %></li>
             <% end %>
 
@@ -49,7 +46,7 @@
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_usuario.nombre+'  '%><span class="caret"></span></a>
           <ul class="dropdown-menu">
-                  <li><a href="users/profile"> Mi perfil</a></li>
+                <li><%= link_to('Mi perfil', users_profile_path, :method => :get) %></li>
                   <li><%= link_to('Editar mi perfil', edit_usuario_registration_path, :method => :get) %></li>
                   <li role="separator" class="divider"></li>
                     <li><%= link_to('Cerrar sesión', destroy_usuario_session_path, :method => :delete) %></li>

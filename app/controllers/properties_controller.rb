@@ -1,5 +1,8 @@
 class PropertiesController < ApplicationController
+		before_action :authenticate_usuario!
+
 	before_action :permiso_arrendador
+	
 
 	def index
 		@properties = Property.all()

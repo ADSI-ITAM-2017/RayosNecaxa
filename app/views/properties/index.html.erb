@@ -1,5 +1,6 @@
+<%= button_to('Agregar propiedad', new_property_path, method: :get , class: "btn btn-default btn-lg")%>
+</br>
 <h1>Propiedades</h1>
-
 <% @properties.each do |property| %>
 <div class="well">
   <h3><%= property.title %></h3>

@@ -1,4 +1,8 @@
 class LikesController < ApplicationController
+	before_action :authenticate_usuario!
+	before_action :permiso_arrendatario
+	skip_before_filter  :verify_authenticity_token
+
 	def index
 		@likes = Like.all()
 	end
@@ -8,14 +12,14 @@ class LikesController < ApplicationController
 	end
 
 	def new
-		if(current_usuario!=null)
+		if(current_usuario!=nil)
 			@like = Like.new
 		end
 
 	end
 
 	def create
-		if(current_usuario!=null)
+		if(current_usuario!=nil)
 			@like = Like.new(like_params)
 			@like.save
 		end

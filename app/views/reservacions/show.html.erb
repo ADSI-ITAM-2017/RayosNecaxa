@@ -1,0 +1,13 @@
+<h2>Información adicional</h2>
+
+<p>Arrendador: <%= Usuario.find(Arrendador.find(@reservacion.id_arrendador).id).email %></p>
+<p>Arrendatario: <%= Usuario.find(Arrendatario.find(@reservacion.id_arrendatario).id).email %></p>
+<p>Fecha de reservación: <%= @reservacion.created_at %></p>
+<p>Fecha de inicio de ocupación de propiedad: <%= @reservacion.fechaIni %></p>
+<p>Fecha de dealojo de propiedad: <%= @reservacion.fechaFin %></p>
+
+<%= button_to('Contactar', new_mensaje_path, method: :get , class: "btn btn-default btn-lg")%>
+<hr>
+<%= link_to "Eliminar", reservacion_path(@reservacion),method: :delete, data: {confirm: 'Estas seguro?'}, :class => 'btn btn-danger' %>
+<hr>
+

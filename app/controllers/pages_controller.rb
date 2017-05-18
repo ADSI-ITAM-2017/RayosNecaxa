@@ -1,4 +1,4 @@
-class GalleriesController < ApplicationController
+class PagesController < ApplicationController
 
 	def index
 		@properties = Property.all()

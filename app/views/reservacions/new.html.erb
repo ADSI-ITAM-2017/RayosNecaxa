@@ -1,0 +1,24 @@
+<h3>Crear una reservación</h3>
+
+<%= form_for :res, url: reservacions_path do |f| %>
+	<% if @reservacion.errors.any? %>
+		<% @reservacion.errors.full_messages.each do |msg| %>
+			<div class = "alert alert-danger"><%= msg %></div>
+			<% end %>
+		<% end %>
+	</br>
+	<p>
+	<%= f.label :usr, 'Usuario a contactar' %><br>
+	<%= f.select :usr, @usuarios.collect {|p| [ p.nombre, p.id ] } %>
+	</p>	
+
+	<p>
+		<%= f.label :fechaIni, 'Fecha de inicio de utilización de la propiedad' %><br>
+		<%= f.text_field(:fechaIni, {:class => 'form-control'}) %>
+	</p>
+	<p>
+		<%= f.label :fechaFin, 'Fecha de desalojo de la propiedad' %><br>
+		<%= f.text_area(:fechaFin,{:class => 'form-control'})%>
+	</p>
+	<%= f.submit({value:'Enviar', :class => 'btn btn-primary'}) %>
+<% end %>

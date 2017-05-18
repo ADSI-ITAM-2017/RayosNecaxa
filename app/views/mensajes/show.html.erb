@@ -1,0 +1,10 @@
+
+
+<h2><%= @mensaje.titulo %></h2>
+<p><%= @mensaje.mensaje %></p>
+<hr>
+<%= button_to('Enviar un nuevo mensaje', new_mensaje_path, method: :get , class: "btn btn-default btn-lg")%>
+</hr>
+<hr>
+<%= link_to "Eliminar", mensaje_path(@mensaje),method: :delete, data: {confirm: 'Estas seguro?'}, :class => 'btn btn-danger' %>
+<hr>
