@@ -1,29 +1,88 @@
-<h2>Log in</h2>
+<style>
+  body{
+      background-color: #333B44;
+  }
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  .confirmBtn{
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      margin-top: 1em;
+      width: 9em;
+      color: white;
+      box-shadow: 3px 3px 2px 1px rgb(19, 31, 40);
+      background-color: rgb(29, 141, 109);
+      border-color: rgb(29, 141, 109);
+  }
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  h2.crearH2{
+      margin-top: 0px;
+      margin-bottom: 19px;
+  }
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  .loginBtn{
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      margin-top: 1em;
+      width: 9em;
+      color: rgb(29, 141, 109);
+      box-shadow: 3px 3px 2px 1px rgb(19, 31, 40);
+      margin-left: -1.8em;
+  }
+
+  .menuOhana{  
+      background-color: rgb(19, 31, 40);
+  }
+
+  .padCont{
+      padding-top: 122px;
+      display: block;
+  }
+
+</style>
+
+<div class="container center-block padCont"> 
+  <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3">   
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2 class="crearH2">Iniciar sesión</h2>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Usuario", :required => true %>
+          </div>
+
+          <div class="field form-group">
+            <%= f.label 'Contraseña' %><br />
+            <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Contraseña", :required => true %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field checkbox">
+              <label>
+                <%= f.check_box :remember_me %>
+                Recuérdame
+              <label>
+            </div>
+          <% end -%>
+           <div class="row">
+              <div class="col-lg-6">
+                <div class="actions">
+                  <%= f.submit "Iniciar sesión", :class => "btn btn-default confirmBtn" %>
+                </div>
+              </div>
+              <div class="col-lg-offset-3 col-lg-3">
+                <a href="/usuarios/sign_up" class="btn btn-default logonBtn" role="button" aria-pressed="true">registrarse</a>
+              </div>
+           </div>
+
+        <% end %>
+
+        <!--<p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>-->
+
+        <!--<%= render "devise/shared/links" %>-->
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<%= render "devise/shared/links" %>
+</div>
