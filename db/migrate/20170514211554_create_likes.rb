@@ -4,7 +4,6 @@ class CreateLikes < ActiveRecord::Migration[5.0]
       t.date :fechares
       t.references :propiedad, foreign_key: true
       t.references :arrendatario, foreign_key: true
-
       t.timestamps
     end
   end
