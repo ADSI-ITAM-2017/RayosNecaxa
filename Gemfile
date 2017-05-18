@@ -64,11 +64,16 @@ gem 'devise'
 
 gem 'bcrypt-ruby'
 
+
+
+gem 'sqlite3', :group => [:development, :test]
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
+  
 gem 'pg'  
 
-gem 'sqlite3' 
 
 gem 'rails_12factor'
-  
-
 
