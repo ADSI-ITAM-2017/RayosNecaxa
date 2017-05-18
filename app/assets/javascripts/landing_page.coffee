@@ -20,6 +20,9 @@ $ ->
       scroll_start = $(this).scrollTop()
       if scroll_start > offset.top-1
         $('.navbar-default').css 'background-color', '#131f28'
+        $('.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover').css
+          'background-color': '#131f28'
+          'color': '#eee'
         if scroll_start < offs.top-5
           $('#liInicio').removeClass 'active'
           $('#liQue').addClass 'active'
@@ -30,6 +33,9 @@ $ ->
           $('#liComo').addClass 'active'
       else 
         $('.navbar-default').css 'background-color', 'transparent'
+        $('.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover').css
+          'background-color': 'transparent'
+          'color': '#eee'
         $('#liInicio').addClass 'active'
         $('#liQue').removeClass 'active'
         $('#liComo').removeClass 'active'

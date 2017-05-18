@@ -15,6 +15,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#flash_messages{
+    color: transparent;
+}
+
 .flecha{
     display: inline-block;
     text-align: center;
