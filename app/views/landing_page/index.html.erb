@@ -69,7 +69,15 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flecha">
-                <a class="btn btn-default btn-lg btn-comienzo" href="galleries" role="button">Comenzar</a>
+                <% if usuario_signed_in? %>
+                  <% if rol_usuario == 'Arrendatario' %>
+                    <a class="btn btn-default btn-lg btn-comienzo" href="galleries" role="button">Comenzar</a>
+                  <% else %>
+                    <%= link_to('Comenzar', users_profile_path, :class => "btn btn-default btn-lg btn-comienzo", :role => "button", :method => :get) %>  
+                  <% end %>
+                <% else %>
+                  <%= link_to('Comenzar', new_usuario_session_path, :class => "btn btn-default btn-lg btn-comienzo", :role => "button")  %> 
+                <% end %>   
               </div>
             </div>
           </div>
