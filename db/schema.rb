@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518022454) do
+ActiveRecord::Schema.define(version: 0) do
 
   create_table "arrendadors", force: :cascade do |t|
     t.integer  "numprop"
