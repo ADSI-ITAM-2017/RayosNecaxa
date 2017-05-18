@@ -1,3 +1,5 @@
+<div class="container centradito">
+
 <h1>Edita propiedad</h1>
 <%= form_for :property, url: property_path(@property), method: :patch do |f| %>
 	<% if @property.errors.any? %>
@@ -24,3 +26,5 @@
 		<%= f.submit({:class => 'btn btn-primary'}) %>
 	</p>
 <% end %>
+
+</div>

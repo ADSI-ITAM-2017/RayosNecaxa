@@ -1,3 +1,4 @@
+<div class="container centradito">
 <h2>Información adicional</h2>
 
 <p>Arrendador: <%= Usuario.find(Arrendador.find(@reservacion.id_arrendador).id).email %></p>
@@ -10,4 +11,4 @@
 <hr>
 <%= link_to "Eliminar", reservacion_path(@reservacion),method: :delete, data: {confirm: 'Estas seguro?'}, :class => 'btn btn-danger' %>
 <hr>
-
+</div>

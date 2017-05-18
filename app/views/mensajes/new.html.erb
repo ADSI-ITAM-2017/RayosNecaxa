@@ -1,5 +1,7 @@
 <h3>Enviar un mensaje</h3>
 
+<div class="container centradito">
+
 <%= form_for :mens, url: mensajes_path do |f| %>
 	<% if @mensaje.errors.any? %>
 		<% @mensaje.errors.full_messages.each do |msg| %>
@@ -23,3 +25,5 @@
 	</p>
 	<%= f.submit({value:'Enviar', :class => 'btn btn-primary'}) %>
 <% end %>
+
+</div>

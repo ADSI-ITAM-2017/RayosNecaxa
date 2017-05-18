@@ -67,9 +67,13 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    
-  
-    <%= yield %>
+    <%if current_page?(root_path) %>
+      <%= yield %>
+    <% else %>
+      <div class="container-fluid centradito">
+          <%= yield %>
+      </div>
+    <% end %> 
   </body>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
