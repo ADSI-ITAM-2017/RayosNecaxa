@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-
+	before_action :permiso_arrendador
 
 	def index
 		@properties = Property.all()
@@ -50,6 +50,5 @@ class PropertiesController < ApplicationController
 	private def property_params
 		
 		params.require(:property).permit(:title,:price,:description,:image)
-
 	end
 end

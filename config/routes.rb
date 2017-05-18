@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :usuarios
   get 'landing_page/index'
   root 'landing_page#index'
-
+  get 'users/profile' => 'users#profile'
   get 'galleries' => 'galleries#index'
   get 'likes/new' => 'likes#new'
   get 'likes/create' => 'likes#create'
