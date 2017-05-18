@@ -66,13 +66,9 @@ gem 'bcrypt-ruby'
 
 gem 'pg'  
 
+gem 'sqlite3' 
 
-group :production do    
-    gem 'rails_12factor'
-end  
-group :development do  
-    gem 'sqlite3', '1.3.4'  
-end
-
+gem 'rails_12factor'
+  
 
 
