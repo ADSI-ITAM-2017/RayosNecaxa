@@ -215,7 +215,7 @@ DEPENDENCIES
   js_assets
   listen (~> 3.0.5)
   paperclip
-  pg (= 0.15.1)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.2)
   rails_12factor
