@@ -114,8 +114,8 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pg (0.12.2)
-    pg (0.12.2-x86-mingw32)
+    pg (0.15.1)
+    pg (0.15.1-x86-mingw32)
     puma (3.8.2)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -137,6 +137,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.3)
       actionpack (= 5.0.3)
       activesupport (= 5.0.3)
@@ -210,9 +215,10 @@ DEPENDENCIES
   js_assets
   listen (~> 3.0.5)
   paperclip
-  pg (= 0.12.2)
+  pg (= 0.15.1)
   puma (~> 3.0)
   rails (~> 5.0.2)
+  rails_12factor
   rake
   sass-rails (~> 5.0)
   spring
